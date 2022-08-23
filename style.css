@@ -1,319 +1,1036 @@
 /* POPPINS FONT FAMILY */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Righteous Font Family */
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
-
-*{
-    font-family: 'Poppins', sans-serif;
+/***** UTILITY *****/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: #F5F5F5;
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
+  background-color: var(--body-bg);
 }
 
-header{
-    height: 500px;
-    background-color: #3400FF;
+:root {
+  --main-bg: #4516fe;
+  --body-bg: #f8f8fa;
+  --que-bg: #e9edff;
+  --btn-gb: #5a31fc;
+  --foot-bg: #4718fe;
+  --white: #ffffff;
+  --black: #000000;
 }
 
-nav{
-    float: right;
-    margin-right: 40px;
-    margin-top: 15px;
-    cursor: pointer;
+a {
+  text-decoration: none;
+  color: var(--white);
 }
 
-.nav-item{
-    margin-right: 20px;
-    color: white;
-    
+li {
+  list-style-type: none;
 }
 
-.nav-item-active{
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    color: #5A31FC;
-    font-weight: 400;
-    margin-right: 20px;
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+/*******  *******/
+
+/******* Header *******/
+header {
+  background-color: var(--main-bg);
+  color: var(--white);
+  width: 100%;
+  position: relative;
 }
 
-.logo{
-    margin: 40px;
+/** navbar **/
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2rem 5rem 1rem 2rem;
 }
 
-.header-text{
-    color: white;
-    margin-left: 60px;
-    margin-top: 50px;
-    float: left;
-    font-size: medium;
+/* nav items */
+nav a {
+  font-size: 1.4rem;
+  margin-left: 3rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
 }
 
-.header-image{
-    float: right;
+nav a:hover {
+  font-weight: 600;
 }
 
-.companies{
-    margin-top: 20px;
-    margin-left: 60px;
+nav .nav-item-active {
+  margin-right: 1.5rem;
+  background-color: var(--white);
+  color: var(--btn-gb);
+  padding: 0.3rem 1rem;
+  border-radius: 0.3rem;
+  font-weight: 600;
 }
 
-.company-items{
-    text-decoration: none;
-    margin-left: 30px;
-    color: black;
-    font-weight: bolder;
-    font-family: 'Righteous', cursive;
+/* logo and hamburger container*/
+nav + div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.api-heading{
-    font-weight: bolder;
-    margin-left: 90px;
-    margin-top: 100px;
-    font-style: bold;
+.logo {
+  width: 12rem;
+  margin-left: 5rem;
+  cursor: pointer;
+  margin-bottom: 10rem;
 }
 
-.cards{
-    margin-left: 90px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
+.fa-solid.ham-icon {
+  font-size: 2.2rem;
+  margin-right: 5rem;
+  display: none;
+}
+/** Header text and img wrapper **/
+.showcase {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.card{
-    width: 20%;
-    height: 250px;
-    background-color: transparent;
-    border-radius: 10px;
-    margin-right: 30px;
-    margin-bottom: 30px;
+/* header text */
+.header-text {
+  margin-left: 5rem;
 }
 
-.card-active{
-    width: 20%;
-    height: 250px;
-    border-radius: 10px;
-    margin-right: 30px;
-    margin-bottom: 30px;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.header-text h2 {
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
 }
 
-.card-logo{
-    margin-left: 30px;
-    margin-top: 30px;
+.header-text p {
+  font-size: 1.8rem;
+  padding-bottom: 14rem;
 }
 
-.card-head{
-    color: black;
-    margin-left: 30px;
+/* haeder img */
+.header-img-container {
+  width: 40%;
+  position: relative;
 }
 
-.card-head-active{
-    color: #5A31FC;
-    margin-left: 30px;
+.header-img-container img {
+  width: 100%;
+  position: absolute;
+  top: -102px;
+  right: 0;
+}
+/*******  *******/
+
+/******* Companies *******/
+.companies {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3rem 5rem;
 }
 
-.card-body{
-    color: black;
-    margin-left: 30px;
-    font-size: small;
+.companies .company-items {
+  color: var(--black);
+  margin-right: 10rem;
+  font-family: 'Righteous', sans-serif;
+  font-size: 2.6rem;
+  font-weight: 500;
+  transition: all 0.1s ease-in-out;
 }
 
-.blog-heading{
-    margin-left: 90px;
+.companies .company-items:hover {
+  font-weight: 600;
 }
 
-.blog-cards{
-    margin-left: 90px;
-    margin-top: 50px;
+/*******  *******/
+
+/******* API Section *******/
+.api {
+  padding: 5rem;
 }
 
-.blog-card{
-    height: 288px;
-    width: 40%;
-    background-color: white;
-    border-radius: 70px 10px 10px 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-right: 50px;
+.api h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 3.5rem;
 }
 
-.blog-content{
-    float: right;
-    margin-right: 100px;
+/* API Cards Container */
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.blog-image{
-    float: left;
+/* Single Card */
+.card {
+  padding: 4rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  align-self: normal;
 }
 
-.blog-bottom{
-    float: right;
-    margin-right: 100px;
+/* Single Card Hover */
+.card:hover {
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.blog-card-bottom-image{
-    margin-top: 20px;
+.card:hover .card-head {
+  color: var(--btn-gb);
 }
 
-.blog-author{
-    font-size: x-small;
-    float: right;
-    margin-top: 16px;
-    margin-right: 8px;
-    font-weight: bold;
+/* card img */
+.card-logo {
+  margin-bottom: 2rem;
 }
 
-.blog-card{
-    float: left;
+/* card heading */
+.card-head {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
 }
 
-.blog-cards{
-    display: flex;
-    flex-direction: row;
+/* card para */
+.card-body {
+  font-size: 1.4rem;
 }
 
-.faq-section{
-    height: 325px;
-    background-color: #E9EDFF;
-    margin-top: 50px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+/* Active Card */
+.card-active {
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.faq-image{
-    width: 40%;
-    height: 300px;
-    float: right;
+/* Card  Active Heading*/
+.card-head-active {
+  color: var(--btn-gb);
 }
-.faq-content{
-    float: left;
-    margin-left: 90px;
+/*******  *******/
+
+/******* Blog Section *******/
+.blog {
+  padding: 5rem;
+  margin-bottom: 4rem;
 }
 
-.faq-content h2{
-    font-weight: bolder;
-    font-size: 200%;
+.blog-heading h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 3.5rem;
 }
 
-
-.faq-content button{
-    background: #5A31FC;
-    border-radius: 3px;
-    color: white;
-    border: none;
-    padding: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
+/* Blogs Card Container */
+.blog-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2%;
 }
 
-.download-section{
-    height: 225px;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+/** Single Blog Card **/
+.blog-card {
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  align-self: normal;
 }
 
-.download-content{
-    float: left;
-    margin-left: 90px;
-    margin-top: 50px;
+.blog-image {
+  width: 60%;
 }
 
-.download-email{
-    float: right;
-    margin-right: 250px;
-    margin-top: 100px;
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
 }
 
-.download-content h1{
-    font-size: 300%;
-}
-.download-content span{
-    font-size: 70%;
-}
-
-.download-email{
-    display: flex;
-    flex-direction: row;
-    padding-left: 200px;
-    padding-bottom: 60px;
+/* blog content */
+.blog-content {
+  background-color: var(--white);
+  position: relative;
+  padding: 1rem 4rem 0 3rem;
+  border-radius: 0px 10px 10px 0px;
+  width: 60%;
 }
 
-form {
-    display:flex;
-    flex-direction:row;
-    height: 40px;
-    border:2px solid grey;
-    border-radius: 22px;
-    padding:2px;
-    background-color: #E9EDFF;
+.blog-content h6 {
+  font-size: 1.2rem;
+  color: var(--btn-gb);
+  margin-bottom: 0.8rem;
+}
+
+.blog-content h3 {
+  font-size: 2.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.blog-content small {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+/* blog bottom writter */
+.blog-bottom {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: -18px;
+  left: 35px;
+}
+
+.blog-bottom .blog-author {
+  font-size: 1.2rem;
+  position: relative;
+  top: -5px;
+  left: 5px;
+}
+/*******  *******/
+
+/******* FAQ Section *******/
+.faq-section {
+  background-color: var(--que-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 5rem;
+}
+
+.faq-content,
+.faq-image {
+  width: 50%;
+}
+
+/* faq content */
+.faq-content h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 5rem;
+  margin-bottom: 2.5rem;
+  margin-top: 5rem;
+}
+
+.faq-content h4 {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  color: #666;
+}
+
+.faq-content h4 + h4 {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.faq-content button {
+  display: inline-block;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  background-color: var(--btn-gb);
+  color: var(--white);
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.faq-content button:hover {
+  background-color: var(--main-bg);
+}
+
+/* FAQ image  */
+.faq-section img {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}
+/*******  *******/
+
+/******* Download Section *******/
+.download-section {
+  padding: 10rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.download-content {
+  width: 60%;
+}
+
+/* download content */
+.download-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.download-content span {
+  font-weight: 500;
+}
+
+/* download email */
+
+.download-email {
+  width: 50%;
+}
+
+/* form */
+.download-section form {
+  background-color: var(--que-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem;
+  width: 100%;
+  border-radius: 3rem;
+}
+
+form input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  flex: 2;
+  padding-left: 3rem;
+}
+
+::placeholder {
+  color: var(--black);
+}
+
+.download-email button {
+  display: inline-block;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--btn-gb);
+  color: var(--white);
+  cursor: pointer;
+  padding: 1.4rem 5rem;
+  border-radius: 3rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.download-email button:hover {
+  background-color: var(--main-bg);
+}
+
+/*******  *******/
+
+/******* Footer Section *******/
+.footer-section {
+  background-color: var(--foot-bg);
+  color: var(--white);
+  padding: 8rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/**** footer left ****/
+.footer-left img {
+  width: 14rem;
+  margin-bottom: 3rem;
+}
+
+/* footer left list menu */
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* list items */
+.list li {
+  font-size: 1.2rem;
+  padding: 0 2rem 0;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+
+/* vertical line */
+.list li ~ li {
+  border-left: 1px solid var(--white);
+}
+
+/* first item lorem */
+.list-items:first-child {
+  padding-left: 0;
+}
+
+/**** footer right ****/
+
+.footer-right {
+  text-align: right;
+}
+.footer-social {
+  margin-bottom: 3rem;
+}
+
+/* social icon */
+.footer-logos {
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+/* social icon below list */
+.logos-list {
+  display: flex;
+}
+
+.logos-list li {
+  font-size: 1.2rem;
+  padding: 0 2rem 0;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+
+.logos-list li ~ li {
+  border-left: 1px solid var(--white);
+}
+
+.logos-list li:last-child {
+  padding-right: 0;
+}
+
+/*--------Media Query Smaller device--------*/
+@media only screen and (max-width: 480px) {
+  /* navbar */
+  nav {
+    display: none;
   }
-  
-  input {
-    flex-grow:2;
-    border:none;
-    width: 400px;
-    background-color: transparent;
+
+  /* logo and hamburger */
+  .logo {
+    width: 7rem;
+    margin: 2rem 0 4rem 2%;
+  }
+
+  .fa-solid.ham-icon {
+    display: block;
+    margin-top: 2rem;
+    margin-right: 2%;
+  }
+
+  /* header text and img */
+  .showcase {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 2%;
+  }
+
+  .header-text {
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+
+  .header-text h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+
+  .header-text p {
+    font-size: 1.4rem;
+    padding-bottom: 0;
+  }
+
+  .header-img-container {
+    width: 100%;
+  }
+
+  .header-img-container img {
+    position: static;
+  }
+
+  /* Companies */
+  .companies {
+    flex-direction: column;
+    padding: 2%;
+    align-items: flex-start;
+  }
+
+  .companies .company-items {
+    font-size: 2.2rem;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  /* API Section */
+  .api {
+    padding: 2%;
+  }
+
+  .api h1 {
+    font-size: 3rem;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
+  /* blog section */
+  .blog {
+    padding: 2%;
+  }
+
+  .blog-heading h1 {
+    font-size: 3rem;
+  }
+
+  .blog-cards {
+    flex-direction: column;
+  }
+
+  .blog-card {
+    flex-direction: column;
+    margin-bottom: 3rem;
+    width: 100%;
+  }
+
+  .blog-image {
+    width: 100%;
+  }
+
+  .blog-content {
+    width: 100%;
+    padding: 1rem 1rem 5rem;
+  }
+
+  .blog-content h3 {
+    font-size: 2.2rem;
+  }
+
+  .blog-bottom {
+    position: absolute;
+    bottom: -16px;
+    left: 10px;
+  }
+
+  .blog-card-bottom-image {
+    width: 4.5rem;
+  }
+
+  /* faq Section */
+  .faq-section {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .faq-content,
+  .faq-image {
+    width: 100%;
+  }
+
+  .faq-content {
+    order: 2;
+    padding: 0 2% 3rem;
+  }
+
+  .faq-content h2 {
+    font-size: 3rem;
+    line-height: 4rem;
+    margin-top: 3rem;
+  }
+
+  /* download */
+  .download-section {
+    padding: 4rem 2% 5rem;
+    flex-direction: column;
     text-align: center;
   }
-  
-  input:focus {
-    outline: none;
-  }
-  
-  button {
-    width: 150px;
-    color:white;
-    border-radius: 20px;
-    border-width: 1px;
-    background-color: #5A31FC;
+
+  .download-content {
+    width: 100%;
+    margin-bottom: 1.5rem;
   }
 
-  .footer-section{
-    height: 225px;
-    background-color: #3C0AFE;
+  .download-email {
+    width: 100%;
+  }
+
+  form input {
+    padding-left: 1rem;
+  }
+
+  .download-email button {
+    font-size: 1rem;
+    padding: 1.2rem 2rem;
+  }
+
+  ::placeholder {
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  .footer-section {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3% 2%;
+  }
+
+  .footer-left img {
+    width: 9rem;
+  }
+
+  .list {
+    margin-bottom: 3rem;
+  }
+
+  .list li {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .footer-right {
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-social {
+    margin-bottom: 3rem;
+  }
+  .logos-list {
+    justify-content: center;
+  }
 }
 
-.footer-left{
-    float: left;
+/*--------Media Query Large device and Tablet--------*/
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  /* navbar */
+  nav {
+    display: none;
+  }
+
+  /* logo and hamburger */
+  .logo {
+    width: 10rem;
+    margin: 2rem 0 4rem 2%;
+  }
+
+  .fa-solid.ham-icon {
+    display: block;
+    margin-top: 2rem;
+    margin-right: 2%;
+  }
+
+  /* header text and img */
+  .showcase {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 2%;
+  }
+
+  .header-text {
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+
+  .header-text h2 {
+    font-size: 2.8rem;
+    font-weight: 500;
+  }
+
+  .header-text p {
+    font-size: 1.6rem;
+    padding-bottom: 0;
+  }
+
+  .header-img-container {
+    width: 100%;
+  }
+
+  .header-img-container img {
+    position: static;
+  }
+
+  /* companies */
+  .companies {
+    margin-bottom: 2rem;
+    padding: 2%;
+  }
+
+  .companies .company-items {
+    font-size: 2rem;
+    margin-right: 2rem;
+  }
+
+  /* API Section */
+  .api {
+    padding: 2%;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    width: 49%;
+    margin-bottom: 2%;
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
+  /* blog section */
+  .blog {
+    padding: 2%;
+  }
+
+  .blog-card {
+    flex-direction: column;
+    margin-bottom: 3rem;
+    width: 100%;
+  }
+
+  .blog-image {
+    width: 100%;
+  }
+
+  .blog-image img {
+    height: 30rem;
+  }
+
+  .blog-content {
+    width: 100%;
+    padding: 1rem 1rem 5rem;
+  }
+
+  .blog-content h3 {
+    font-size: 2.2rem;
+  }
+
+  .blog-bottom {
+    position: absolute;
+    bottom: -25px;
+    left: 10px;
+  }
+
+  .blog-card-bottom-image {
+    width: 6rem;
+  }
+
+  .blog-bottom .blog-author {
+    font-size: 1.4rem;
+  }
+
+  /* faq Section */
+  .faq-section {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .faq-content,
+  .faq-image {
+    width: 100%;
+  }
+
+  .faq-content {
+    order: 2;
+    padding: 0 2% 3rem;
+  }
+
+  .faq-image {
+    height: 25rem;
+  }
+
+  .faq-image img {
+    object-fit: cover;
+    object-position: left top;
+  }
+
+  /* download */
+  .download-section {
+    padding: 4rem 2% 5rem;
+    flex-direction: column;
+  }
+
+  .download-content {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .download-email {
+    width: 100%;
+  }
+
+  form input {
+    padding-left: 1rem;
+  }
+
+  .download-email button {
+    font-size: 1.4rem;
+    padding: 1.2rem 3.4rem;
+  }
+
+  ::placeholder {
+    font-size: 1.4rem;
+  }
+
+  /* Footer */
+  .footer-section {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3% 2%;
+  }
+
+  .footer-left img {
+    width: 10rem;
+  }
+
+  .list {
+    margin-bottom: 3rem;
+  }
+
+  .footer-right {
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-social {
+    margin-bottom: 3rem;
+  }
+
+  .logos-list {
+    justify-content: center;
+  }
 }
 
-.footer-logo{
-    margin-top: 50px;
-    padding-left: 90px;
-}
+/* media query for larger device and laptop */
 
-.list{
-    display: flex;
-    flex-direction: row;
-    margin-left: 30px;
-    list-style-type: none;
-    color: white;
-}
+@media only screen and (min-width: 769px) and (max-width: 1280px) {
+  /* Logo */
+  .logo {
+    margin: 2rem 0 6rem 2%;
+  }
+  /* showcase */
+  .showcase {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 2%;
+  }
 
-.logos-list{
-    display: flex;
-    flex-direction: row;
-    margin-left: 10px;
-    list-style-type: none;
-    color: white;
-    margin-top: 120px;
-    margin-right: -200px;
-}
+  .header-text {
+    margin-left: 0;
+    margin-bottom: 3rem;
+  }
 
+  .header-text p {
+    padding-bottom: 0;
+  }
 
+  .header-img-container {
+    width: 100%;
+  }
 
-.list-items{
-    margin-left: 25px;
-}
+  .header-img-container img {
+    position: static;
+    width: 100%;
+  }
 
-.footer-right{
-    float: right;
-    margin-top: 10px;
-    margin-right: 100px;
-}
+  /* API */
+  .api {
+    padding: 2%;
+  }
 
-.footer-logos{
-    margin-top: 50px;
-    margin-left: 20px;
+  .cards {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 49%;
+    margin-bottom: 2%;
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
+  /* Blog Section */
+  .blog {
+    padding: 2%;
+  }
+
+  .blog-cards {
+    gap: 2%;
+  }
+
+  .blog-card {
+    flex-direction: column;
+  }
+
+  .blog-image {
+    width: 100%;
+  }
+
+  .blog-image img {
+    height: 30rem;
+  }
+
+  .blog-content {
+    width: 100%;
+    padding: 1rem 4rem 6rem 3rem;
+  }
+
+  /* Faq section */
+
+  .faq-section {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .faq-content,
+  .faq-image {
+    width: 100%;
+  }
+
+  .faq-content {
+    order: 2;
+    padding: 2%;
+  }
+
+  .faq-section img {
+    height: 30rem;
+    object-fit: cover;
+    object-position: top left;
+  }
+
+  /* download */
+  .download-content {
+    width: 40%;
+  }
+  .download-content h1 {
+    font-size: 2.6rem;
+  }
+  .download-email {
+    width: 60%;
+  }
+  .download-email button {
+    font-size: 1.5rem;
+    padding: 1.4rem 3rem;
+  }
 }
